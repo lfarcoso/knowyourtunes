@@ -13,29 +13,29 @@
     <div class="navbar-inner">
     <div class="brand">KnowYourTunes</div>
             <ul class="nav">
-      <li><a href="#">Your Music</a></li>
       <li><a href="#">Random Music</a></li>
       <li><a href="#">Trending</a></li>
+      <li><a href="addsong.html">Add A Song</a></li>
   <li class="dropdown">
     <a class="dropdown-toggle" id="drop1" role="button" data-toggle="dropdown" href="#">
         Genres
         <b class="caret"></b>
       </a>
     <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-     <li><a href="genres/blues.html" tabindex="-1">Blues</a></li>
-     <li><a href="genres/classical.html" tabindex="-1">Classical</a></li>
-     <li><a href="genres/country.html" tabindex="-1">Country</a></li>
+     <!--<li><a href="genres/blues.html" tabindex="-1">Blues</a></li>-->
+     <!-- <li><a href="genres/classical.html" tabindex="-1">Classical</a></li>-->
+     <!-- <li><a href="genres/country.html" tabindex="-1">Country</a></li>-->
      <li><a href="genres/electronic.html" tabindex="-1">Electronic</a></li>
-     <li><a href="genres/folk.html" tabindex="-1">Folk</a></li>
-     <li><a href="genres/jazz.html" tabindex="-1">Jazz</a></li>
-     <li><a href="genres/latin.html" tabindex="-1">Latin</a></li>
-     <li><a href="genres/metal.html" tabindex="-1">Metal</a></li>
-     <li><a href="genres/pop.html" tabindex="-1">Pop</a></li>
-     <li><a href="genres/randb.html" tabindex="-1">R&B</a></li>
-     <li><a href="genres/rap.html" tabindex="-1">Rap</a></li>
+     <!-- <li><a href="genres/folk.html" tabindex="-1">Folk</a></li>-->
+     <!--<li><a href="genres/jazz.html" tabindex="-1">Jazz</a></li>-->
+     <!-- <li><a href="genres/latin.html" tabindex="-1">Latin</a></li>-->
+     <!-- <li><a href="genres/metal.html" tabindex="-1">Metal</a></li>-->
+     <!-- <li><a href="genres/pop.html" tabindex="-1">Pop</a></li>-->
+     <!-- <li><a href="genres/randb.html" tabindex="-1">R&B</a></li>-->
+     <!-- <li><a href="genres/rap.html" tabindex="-1">Rap</a></li>-->
      <li><a href="genres/reggae.html" tabindex="-1">Reggae</a></li>
      <li><a href="genres/rock.html" tabindex="-1">Rock</a></li>
-     <li><a href="genres/others.html" tabindex="-1">Others</a></a></li>
+     <!-- <li><a href="genres/others.html" tabindex="-1">Others</a></li>-->
     </ul>
   </li>
 </ul>
@@ -43,15 +43,31 @@
 </div>
 <br></br>
 <br></br>
-<div class="span12"><div class="span3 well">
-    <center><img src="#" class="img-rounded" width="140" height="140"></center>
-    <p><h4>your name</h4></p>
-    <p><span>your E-mail</span></p>
-</div>
-<div class="span7">
-    
-</div>
-</div>
+<div class="container span4 offset4 well">
+        <center><form class="form-signin">
+            <p><h2 class"form-singin-heading"> Add a Song!</h2></p>
+            <p> Group Name </p>
+            <p><input type="text" placeholder="Write Your Goup Name" class"input-block-level" id="group-name"></p>
+            <p> Album </p>
+            <p><input type="text" placeholder="Write the name of the album" class"input-block-level" id="album"></p>
+            <p> Write the song iframe from soundcloud </p>
+            <p><input type="text" placeholder="Write the iframe tag" class"input-block-level" id="iframe"></p>
+                <button type="button" class="btn" data-toggle="collapse" data-target="#demo">
+                    get the iframe tag instructions
+                </button>
+                 <div id="demo" class="collapse out">
+                      <p>go to the song you want to add in soundcloud. (if you dont have a soundcloud account,
+                        create one and upload your songs there). then go to the share buttom there and copy the embed code.
+                        come back and paste it here.
+                        </p>
+                 </div>
+            <p> Song Name </p>
+            <p><input type="text" placeholder="Write the song name" class"input-block-level" id="song-name"></p>
+            <p> Song Desctiption </p>
+            <p><textarea rows="5" id="song-description"></textarea></p>
+            <p><buttom class="btn btn-primary btn-large" type"submit">Add Song</buttom></p>
+</form>
+</center>
 <script src="bootstrap/js/jquery.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
 <script src="bootstrap/js/soundcloud.js"></script>
