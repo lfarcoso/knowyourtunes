@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Add a song</title>
+<title>KnowYourTunes</title>
 <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
 <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
 <link href="bootstrap/css/mycss.css" rel="stylesheet" media="screen">
@@ -11,7 +11,7 @@
 <body>
 <div class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
-    <div class="brand"><a href="index.html">KnowYourTunes</a></div>
+    <div class="brand"><a href="#">KnowYourTunes</a></div>
             <ul class="nav">
       <li><a href="#">Random Music</a></li>
       <li><a href="#">New Songs</a></li>
@@ -43,33 +43,24 @@
 </div>
 <br></br>
 <br></br>
-<div class="container span4 offset4 well">
-        <center><form class="form-signin">
-            <p><h2 class"form-singin-heading"> Add a Song!</h2></p>
-            <p> Group Name </p>
-            <p><input type="text" placeholder="Write Your Goup Name" class"input-block-level" id="group-name"></p>
-            <p> Album </p>
-            <p><input type="text" placeholder="Write the name of the album" class"input-block-level" id="album"></p>
-            <p> Write the song iframe from soundcloud </p>
-            <p><input type="text" placeholder="Write the iframe tag" class"input-block-level" id="iframe"></p>
-                <button type="button" class="btn" data-toggle="collapse" data-target="#demo">
-                    get the iframe tag instructions
-                </button>
-                 <div id="demo" class="collapse out">
-                      <p>go to the song you want to add in soundcloud. (if you dont have a soundcloud account,
-                        create one and upload your songs there). then go to the share buttom there and copy the embed code.
-                        come back and paste it here.
-                        </p>
-                 </div>
-            <p> Song Name </p>
-            <p><input type="text" placeholder="Write the song name" class"input-block-level" id="song-name"></p>
-            <p> Song Desctiption </p>
-            <p><textarea rows="5" id="song-description"></textarea></p>
-            <p><buttom class="btn btn-primary btn-large" type"submit">Add Song</buttom></p>
-</form>
-</center>
+<div class="container well span4 offset4"><center><h1>Welcome To KnowYourTunes!</h1>
+<h2>start listening to other music now!</h2></center>
+</div>
+<div class="container span4 offset4">
+<center><div id="myCarousel" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="active item"><div class="container span3 well"><h1>choose a genre</h1></div></div>
+        <div class="item"><div class="container span3 well"><a href="genres/electronic.html"><h1>Electronic</h1></a></div></div>
+        <div class="item"><div class="container span3 well"><a href="genres/reggae.html"><h1>Reggae</h1></a></div></div>
+        <div class="item"><div class="container span3 well"><a href="genres/rock.html"><h1>Rock</h1></a></div></div>
+    </div>
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div></center>
+</div>
 <script src="bootstrap/js/jquery.js"></script>
 <script src="bootstrap/js/bootstrap.js"></script>
 <script src="bootstrap/js/soundcloud.js"></script>
 </body>
 </html>
+
