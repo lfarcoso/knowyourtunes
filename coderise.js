@@ -94,9 +94,56 @@
           }
       });
   };
+  
+  
+   var latestsongs = function() {
+      
+    var Song = StackMob.Model.extend({ schemaName: 'songs' });
+    var songs = new Song();
+    
+    var query = new StackMob.Collection.Query();
+    query.setRange(0,5).orderDesc('createddate');
+    
+    songs.query(query,{
+        success: function(model) {
+          var all = model.toJSON();
+         $.each(all, function(ix, songs) {
+          $('#latestsongs').append('<div class="well"><h4>' + songs.songname + ' - ' + songs.groupname + '</h4><p> album: ' + songs.album + '</p><p>' + songs.songdescription +'</p><button type="button" class="btn" data-toggle="collapse" data-target="#song'+ix+'"> Listen Now! </button> <div id="song'+ix+'" class="collapse out">' + songs.iframe + '</p></div></div>'); 
+         });
+            
+        },
+        error: function(mode, response) {
+            console.log(response);
+        }
+    });
+    
+    
+    $('#randsong').click(function(e) {
+    e.preventDefault();
+    
+    var Song = StackMob.Model.extend({ schemaName: 'songs' });
+    
+    var songs = new Song();
+    
+    songs.fetch({
+        success: function(model) {
+          var songs = model.toJSON();
+          var length = Object.keys(songs).length + 1;
+          var i =  Math.floor(Math.random() * length);
+          $('#randspan').append('<div class="well"><h4>' + songs[i].songname + ' - ' + songs[i].groupname + '</h4><p> album: ' + songs[i].album + '</p><p>' + songs[i].songdescription +'</p><button type="button" class="btn" data-toggle="collapse" data-target="#'+i+'"> Listen Now! </button> <div id="'+i+'" class="collapse out">' + songs[i].iframe + '</p></div></div>'); 
+              
+        },
+        error: function(mode, response) {
+            console.log(response);
+        }
+    });
+
+  });
     
 //reading functions
-    readingelectronicsongs()
+   
+    readingelectronicsongs();
     readingrocksongs();
     readingregsongs();
+    latestsongs();
 })();
