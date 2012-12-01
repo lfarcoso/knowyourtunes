@@ -116,6 +116,7 @@
             console.log(response);
         }
     });
+   };
     
     
     $('#randsong').click(function(e) {
